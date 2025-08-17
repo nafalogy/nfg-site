@@ -1,82 +1,112 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2822
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nafalogy (NFG) — Official Site</title>
+  <meta name="description" content="Nafalogy Finance (NFG) — Community-driven BSC token. Trade on PancakeSwap, view live chart on DexScreener, and verify contract on BscScan." />
+  <meta name="theme-color" content="#0fb6cf" />
+  <meta property="og:title" content="Nafalogy (NFG) — Official Site" />
+  <meta property="og:description" content="Trade NFG on PancakeSwap • Live chart on DexScreener • Verified on BscScan." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/logo.png" />
 
-\f0\fs24 \cf0 <!DOCTYPE html>\
-<html lang="en">\
-<head>\
-  <meta charset="UTF-8">\
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">\
-  <title>Nafalogy (NFG) Official Website</title>\
-  <style>\
-    body \{\
-      margin: 0;\
-      font-family: Arial, sans-serif;\
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);\
-      color: white;\
-      text-align: center;\
-    \}\
-    header \{\
-      padding: 40px 20px;\
-    \}\
-    header img \{\
-      width: 120px;\
-    \}\
-    h1 \{\
-      font-size: 2.5em;\
-      margin: 20px 0;\
-    \}\
-    p \{\
-      font-size: 1.2em;\
-      margin-bottom: 30px;\
-    \}\
-    .btn \{\
-      display: inline-block;\
-      padding: 15px 30px;\
-      background: gold;\
-      color: black;\
-      font-weight: bold;\
-      border-radius: 30px;\
-      text-decoration: none;\
-      transition: 0.3s;\
-    \}\
-    .btn:hover \{\
-      background: orange;\
-      color: white;\
-    \}\
-    footer \{\
-      margin-top: 50px;\
-      padding: 20px;\
-      font-size: 0.9em;\
-      background: #111;\
-    \}\
-  </style>\
-</head>\
-<body>\
-  <header>\
-    <img src="https://i.ibb.co/ckRj7WB/nfg-logo.png" alt="NFG Logo">\
-    <h1>Welcome to Nafalogy (NFG)</h1>\
-    <p>The Official Website of Nafalogy Finance (NFG) Coin</p>\
-    <a href="#" class="btn">\uc0\u55357 \u56960  Buy NFG Coin</a>\
-  </header>\
-\
-  <section>\
-    <h2>About NFG</h2>\
-    <p>\
-      Nafalogy Finance (NFG) is the future of decentralized finance.  \
-      A community-driven coin built to provide innovation, transparency,  \
-      and growth opportunities in the crypto world.\
-    </p>\
-  </section>\
-\
-  <footer>\
-    <p>\'a9 2025 Nafalogy (NFG) | All Rights Reserved</p>\
-    <p>Follow us on <a href="https://twitter.com/" style="color:gold;">Twitter</a> | \
-       <a href="https://instagram.com/" style="color:gold;">Instagram</a></p>\
-  </footer>\
-</body>\
-</html>\
-}
+  <style>
+    :root{
+      --bg:#0b1320; --card:#101a2b; --text:#e9f1ff; --muted:#9db0cf;
+      --accent:#00c2d6; --btn:#10c6a3; --border:#1d2a44;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:
+      linear-gradient(180deg,#081020 0%, #0b1320 35%, #0b1320 100%); color:var(--text);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif
+    }
+    .wrap{max-width:1100px;margin:auto;padding:24px}
+    header{display:flex;align-items:center;gap:16px}
+    header img{width:56px;height:56px;border-radius:50%;background:#fff}
+    h1{font-size:clamp(28px,3.2vw,42px);margin:8px 0}
+    p{color:var(--muted);line-height:1.6}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px}
+    .grid{display:grid;gap:16px;margin-top:22px}
+    @media(min-width:900px){.grid{grid-template-columns:1.1fr 1fr}}
+    .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:12px;
+         text-decoration:none;font-weight:600;background:var(--btn);color:#061015;border:1px solid var(--border)}
+    .btn.secondary{background:#0e223f;color:#d8e6ff}
+    .tag{display:inline-block;background:#0e223f;border:1px solid var(--border);padding:6px 10px;border-radius:10px;color:#aeefff}
+    code{background:#091427;border:1px solid #152342;color:#aeefff;padding:6px 10px;border-radius:10px}
+    ul{margin:8px 0 0 18px;color:var(--muted)}
+    iframe{width:100%;min-height:520px;border:0;border-radius:14px}
+    footer{margin:28px 0 10px;color:#7fa1c9;font-size:14px;text-align:center}
+    .tiny{font-size:12px;color:#6f8db3}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- HEADER -->
+    <header>
+      <img src="assets/logo.png" alt="NFG logo" onerror="this.style.display='none'">
+      <div>
+        <h1>Nafalogy (NFG)</h1>
+        <p>The official website of Nafalogy Finance on BNB Smart Chain.</p>
+      </div>
+    </header>
+
+    <!-- TOP CARDS -->
+    <div class="grid">
+      <section class="card">
+        <h2>Buy / Trade</h2>
+        <p>Swap NFG on PancakeSwap and track the live chart on DexScreener.</p>
+        <div class="btns">
+          <a class="btn" target="_blank" rel="noopener"
+             href="https://pancakeswap.finance/swap?chain=bsc&outputCurrency=0x1C72e7293d9FD01e17CAB03b20B95353135AbDe6">
+            🥞 Buy on PancakeSwap
+          </a>
+          <a class="btn secondary" target="_blank" rel="noopener"
+             href="https://dexscreener.com/bsc/0x1C72e7293d9FD01e17CAB03b20B95353135AbDe6">
+            📈 View Chart
+          </a>
+          <a class="btn secondary" target="_blank" rel="noopener"
+             href="https://bscscan.com/token/0x1C72e7293d9FD01e17CAB03b20B95353135AbDe6">
+            🔍 BscScan
+          </a>
+        </div>
+
+        <p style="margin-top:16px">
+          <strong>Contract:</strong>
+          <code id="contract">0x1C72e7293d9FD01e17CAB03b20B95353135AbDe6</code>
+        </p>
+        <span class="tiny">Always double-check the contract before trading.</span>
+      </section>
+
+      <section class="card">
+        <h2>About NFG</h2>
+        <p>Nafalogy Finance (NFG) is a community-driven token focused on transparency and steady growth.
+           Liquidity is live on PancakeSwap and the total supply is capped at <strong>21,000,000</strong> NFG.
+        </p>
+        <ul>
+          <li>BNB Smart Chain (BEP-20)</li>
+          <li>Burnable, Ownable, Capped supply</li>
+          <li>Verified contract on BscScan</li>
+        </ul>
+        <p class="tiny">More docs & utilities coming soon.</p>
+      </section>
+    </div>
+
+    <!-- CHART -->
+    <section class="card" style="margin-top:18px">
+      <h2>Live Chart</h2>
+      <iframe
+        src="https://dexscreener.com/bsc/0x1C72e7293d9FD01e17CAB03b20B95353135AbDe6?embed=1&theme=dark"
+        title="DexScreener Chart">
+      </iframe>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      © 2025 Nafalogy (NFG) — All rights reserved.
+      <div class="tiny">This site is informational and not financial advice.</div>
+    </footer>
+  </div>
+</body>
+</html>
