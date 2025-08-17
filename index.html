@@ -1,116 +1,132 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- ====== BASIC META ====== -->
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Nafalogy (NFG) — Official Site</title>
-  <meta name="description" content=.NafalogyCoin (NFG) is a community-driven token built on BNB Chain, designed to bring learning, trading, and decentralized finance together." />
-  <meta name="theme-color" content="#0fb6cf" />
-  <meta property="og:title" content="Nafalogy (NFG) — Official Site" />
-  <meta property="og:description" content="Trade NFG on PancakeSwap • Live chart on DexScreener • Verified on BscScan." />
-  <meta property="og:type" content="website" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nafalogy (NFG) — Official</title>
+  <meta name="description" content="NafalogyCoin (NFG) is a community-driven token built on BNB Chain, designed to bring learning, trading, and decentralized finance together.">
+
+  <!-- ====== FAVICONS (upload /assets/*) ====== -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+  <link rel="apple-touch-icon" href="assets/favicon-192.png">
+
+  <!-- ====== SOCIAL CARDS ====== -->
+  <meta property="og:title" content="Nafalogy (NFG) — Official" />
+  <meta property="og:description" content="NafalogyCoin (NFG) is a community-driven token built on BNB Chain, designed to bring learning, trading, and DeFi together." />
   <meta property="og:image" content="assets/logo.png" />
-  <link rel="icon" href="assets/favicon.png" />
-<meta property="og:image" content="assets/logo.png">
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nafalogy (NFG) — Official" />
+  <meta name="twitter:description" content="NFG on BNB Chain — trade on PancakeSwap, track on DexScreener." />
+  <meta name="twitter:image" content="assets/logo.png" />
 
-
+  <!-- ====== FONTS + SIMPLE CSS ====== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0b1320; --card:#101a2b; --text:#e9f1ff; --muted:#9db0cf;
-      --accent:#00c2d6; --btn:#10c6a3; --border:#1d2a44;
+      --bg:#0b1220; --card:#111a2a; --muted:#9bb2d1; --text:#e6f0ff; --accent:#17c3b2; --accent2:#00d084;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:
-      linear-gradient(180deg,#081020 0%, #0b1320 35%, #0b1320 100%); color:var(--text);
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif
-    }
-    .wrap{max-width:1100px;margin:auto;padding:24px}
-    header{display:flex;align-items:center;gap:16px}
-    header img{width:56px;height:56px;border-radius:50%;background:#fff}
-    h1{font-size:clamp(28px,3.2vw,42px);margin:8px 0}
-    p{color:var(--muted);line-height:1.6}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px}
-    .grid{display:grid;gap:16px;margin-top:22px}
-    @media(min-width:900px){.grid{grid-template-columns:1.1fr 1fr}}
-    .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:12px;
-         text-decoration:none;font-weight:600;background:var(--btn);color:#061015;border:1px solid var(--border)}
-    .btn.secondary{background:#0e223f;color:#d8e6ff}
-    .tag{display:inline-block;background:#0e223f;border:1px solid var(--border);padding:6px 10px;border-radius:10px;color:#aeefff}
-    code{background:#091427;border:1px solid #152342;color:#aeefff;padding:6px 10px;border-radius:10px}
-    ul{margin:8px 0 0 18px;color:var(--muted)}
-    iframe{width:100%;min-height:520px;border:0;border-radius:14px}
-    footer{margin:28px 0 10px;color:#7fa1c9;font-size:14px;text-align:center}
-    .tiny{font-size:12px;color:#6f8db3}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif}
+    .wrap{max-width:1100px;margin:0 auto;padding:40px 20px 80px}
+    header{display:flex;gap:16px;align-items:center;margin-bottom:18px}
+    header img{width:48px;height:48px;border-radius:12px}
+    h1{font-size:40px;line-height:1.1;margin:0 0 4px}
+    .sub{color:var(--muted);margin-bottom:26px}
+    .grid{display:grid;grid-template-columns:1.1fr 1fr;gap:20px}
+    .card{background:var(--card);border:1px solid #1b2a41;border-radius:14px;padding:22px}
+    h2{font-size:22px;margin:0 0 14px}
+    .row{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;background:#0f243d;border:1px solid #203550;color:#dff1ff;
+         padding:12px 14px;border-radius:12px;text-decoration:none;font-weight:600;transition:.15s}
+    .btn:hover{transform:translateY(-1px);border-color:#38527a}
+    .btn.primary{background:linear-gradient(180deg,#17c3b2,#00aa98);color:#052018}
+    code.addr{background:#0b1424;border:1px solid #203550;color:#a7c2e8;padding:8px 10px;border-radius:10px;font-size:13px}
+    ul.kv{padding-left:18px;margin:8px 0;color:var(--muted)}
+    section{margin-top:26px}
+    iframe{width:100%;height:560px;border:0;border-radius:14px;overflow:hidden;background:#09101c}
+    footer{margin-top:30px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;color:var(--muted)}
+    footer a{color:#bfe6ff;text-decoration:none;border-bottom:1px dashed #2a466a}
+    .badge{display:inline-flex;gap:8px;align-items:center;padding:8px 10px;border-radius:10px;background:#0e1b2b;border:1px solid #203550;color:#b7d0ee;font-size:14px}
+    .badge img{width:18px;height:18px;border-radius:4px}
+    @media(max-width:960px){.grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
+  <!-- ====== QUICK CONFIG (edit yahan) ====== -->
+  <!-- Contract: -->
+  <!-- 0x1C72e7293d9FD01e17CAB03b20B95353135AbDe6 -->
+  <!-- DexScreener pair or token URL (embed param ke sath): -->
+  <!-- Example: https://dexscreener.com/bsc/PAIR_OR_TOKEN?embed=1&theme=dark -->
+  <!-- PancakeSwap direct trade link: apna v2 pair/token url use karo -->
+
   <div class="wrap">
-    <!-- HEADER -->
     <header>
-      <img src="assets/logo.png" alt="NFG logo" onerror="this.style.display='none'">
+      <img src="assets/logo.png" alt="NFG logo">
       <div>
         <h1>Nafalogy (NFG)</h1>
-        <p>The official website of Nafalogy Finance on BNB Smart Chain.</p>
+        <div class="sub">The official website of Nafalogy Finance on BNB Smart Chain.</div>
       </div>
     </header>
 
-    <!-- TOP CARDS -->
     <div class="grid">
-      <section class="card">
+      <!-- Buy/Trade -->
+      <div class="card">
         <h2>Buy / Trade</h2>
         <p>Swap NFG on PancakeSwap and track the live chart on DexScreener.</p>
-        <div class="btns">
-          <a class="btn" target="_blank" rel="noopener"
-             href="https://pancakeswap.finance/swap?chain=bsc&outputCurrency=0x1C72e7293d9FD01e17CAB03b20B95353135AbDe6">
+        <div class="row" style="margin:10px 0 14px">
+          <a class="btn primary" href="https://pancakeswap.finance/swap?chain=bsc" target="_blank" rel="noopener">
             🥞 Buy on PancakeSwap
           </a>
-          <a class="btn secondary" target="_blank" rel="noopener"
-             href="https://dexscreener.com/bsc/0x1C72e7293d9FD01e17CAB03b20B95353135AbDe6">
-            📈 View Chart
-          </a>
-          <a class="btn secondary" target="_blank" rel="noopener"
-             href="https://bscscan.com/token/0x1C72e7293d9FD01e17CAB03b20B95353135AbDe6">
-            🔍 BscScan
-          </a>
+          <a class="btn" href="https://dexscreener.com/bsc" target="_blank" rel="noopener">📈 View Chart</a>
+          <a class="btn" href="https://bscscan.com/token/0x1C72e7293d9FD01e17CAB03b20B95353135AbDe6" target="_blank" rel="noopener">🔍 BscScan</a>
         </div>
 
-        <p style="margin-top:16px">
-          <strong>Contract:</strong>
-          <code id="contract">0x1C72e7293d9FD01e17CAB03b20B95353135AbDe6</code>
-        </p>
-        <span class="tiny">Always double-check the contract before trading.</span>
-      </section>
+        <div style="margin-top:6px;color:#9bb2d1">Contract:</div>
+        <code class="addr">0x1C72e7293d9FD01e17CAB03b20B95353135AbDe6</code>
+        <div style="margin-top:8px;color:#7693b6;font-size:13px">Always double-check the contract before trading.</div>
+      </div>
 
-      <section class="card">
+      <!-- About -->
+      <div class="card">
         <h2>About NFG</h2>
-       <p>
-  NafalogyCoin (NFG) is a community-driven token built on BNB Chain,
-  designed to bring learning, trading, and decentralized finance together.
-</p>
-
-        <ul>
+        <p style="color:#cfe5ff">
+          <strong>NafalogyCoin (NFG)</strong> is a community-driven token built on <strong>BNB Chain</strong>,
+          designed to bring <strong>learning, trading, and decentralized finance</strong> together.
+        </p>
+        <ul class="kv">
           <li>BNB Smart Chain (BEP-20)</li>
           <li>Burnable, Ownable, Capped supply</li>
           <li>Verified contract on BscScan</li>
         </ul>
-        <p class="tiny">More docs & utilities coming soon.</p>
-      </section>
+        <div class="row" style="margin-top:10px">
+          <span class="badge"><img src="assets/logo.png" alt="">Ticker: NFG</span>
+          <span class="badge">Max Supply: 21,000,000</span>
+        </div>
+      </div>
     </div>
 
-    <!-- CHART -->
-    <section class="card" style="margin-top:18px">
-      <h2>Live Chart</h2>
-      <iframe
-        src="https://dexscreener.com/bsc/0x1C72e7293d9FD01e17CAB03b20B95353135AbDe6?embed=1&theme=dark"
-        title="DexScreener Chart">
-      </iframe>
+    <!-- Live Chart -->
+    <section>
+      <h2 style="margin:16px 0">Live Chart</h2>
+      <div class="card" style="padding:0">
+        <!-- DexScreener EMBED: apna exact pair/token embed URL yahan set karo -->
+        <iframe
+          src="https://dexscreener.com/bsc?embed=1&theme=dark"
+          title="DexScreener"
+          allow="clipboard-write; clipboard-read">
+        </iframe>
+      </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- Footer / Socials -->
     <footer>
-      © 2025 Nafalogy (NFG) — All rights reserved.
-      <div class="tiny">This site is informational and not financial advice.</div>
+      <span>🔗 Follow us:</span>
+      <a href="https://x.com/nafalogy" target="_blank" rel="noopener">X (Twitter)</a> •
+      <a href="https://www.instagram.com/nafalogy/" target="_blank" rel="noopener">Instagram</a>
     </footer>
   </div>
 </body>
